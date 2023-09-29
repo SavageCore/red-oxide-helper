@@ -26,5 +26,5 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            dist/main.user.js
+            dist/red-oxide-helper.user.js
             LICENSE

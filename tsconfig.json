@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"target": "ESNext",
+		"outDir": "dist",
+		"types": [
+			"vite-userscript-plugin/types/tampermonkey"
+		]
+	},
+	"include": [
+		"src/**/*"
+	]
+}
