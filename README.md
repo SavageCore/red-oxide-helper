@@ -2,7 +2,8 @@
 
 > Generate a link to copy red_oxide command to clipboard
 
-![Preview](https://github.com/SavageCore/red-oxide-helper/blob/master/assets/preview.png)
+![Preview](https://github.com/SavageCore/red-oxide-helper/assets/171312/2cd5424e-a38d-49d0-ae52-e34d1948a1ec)
+
 
 ## Install
 
