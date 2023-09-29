@@ -19,7 +19,7 @@ async function main() {
 			const query = getQueryParameters(document.location.search);
 
 			for (const torrent of alltorrents) {
-				if (linkregex.exec(torrent)) {
+				if (linkregex.test(torrent)) {
 					const torrentGroup = query.id;
 					const torrentID = RegExp.$1;
 					url = baseURL + '/torrents.php?id=' + torrentGroup + '\\&torrentid=' + torrentID;
@@ -38,10 +38,10 @@ async function main() {
 		case (window.location.href.match(/\?type=seeding/) || {}).input:
 		case (window.location.href.match(/\?type=leeching/) || {}).input:
 		case (window.location.href.match(/\?type=snatched/) || {}).input:
-		case (window.location.href.match(/\?type=uploaded/) || {}).input:
+		case (window.location.href.match(/\?type=uploaded/) || {}).input: {
 			for (const torrent of alltorrents) {
 				const torrentRegex = /torrents.php\?id=(\d+)&torrentid=(\d+)/;
-				if (torrentRegex.exec(torrent)) {
+				if (torrentRegex.test(torrent)) {
 					const torrentGroup = RegExp.$1;
 					const torrentID = RegExp.$2;
 					url = baseURL + '/torrents.php?id=' + torrentGroup + '\\&torrentid=' + torrentID;
@@ -53,10 +53,12 @@ async function main() {
 			}
 
 			break;
-		case (window.location.href.match(/\/better.php\?method/) || {}).input:
+		}
+
+		case (window.location.href.match(/\/better.php\?method/) || {}).input: {
 			for (const torrent of alltorrents) {
 				const torrentRegex = /torrents.php\?id=(\d+)&torrentid=(\d+)/;
-				if (torrentRegex.exec(torrent)) {
+				if (torrentRegex.test(torrent)) {
 					const torrentGroup = RegExp.$1;
 					const torrentID = RegExp.$2;
 					url = baseURL + '/torrents.php?id=' + torrentGroup + '&torrentid=' + torrentID;
@@ -66,12 +68,14 @@ async function main() {
 			}
 
 			break;
+		}
+
 		case (window.location.href.match(/\/artist.php/) || {}).input:
 		case (window.location.href.match(/\/collages.php\?id/) || {}).input:
-		case (window.location.href.match(/\/torrents.php/) || {}).input:
+		case (window.location.href.match(/\/torrents.php/) || {}).input: {
 			for (const torrent of alltorrents) {
 				const torrentRegex = /torrents.php\?id=(\d+)&torrentid=(\d+)/;
-				if (torrentRegex.exec(torrent)) {
+				if (torrentRegex.test(torrent)) {
 					const torrentGroup = RegExp.$1;
 					const torrentID = RegExp.$2;
 					url = baseURL + '/torrents.php?id=' + torrentGroup + '&torrentid=' + torrentID;
@@ -83,8 +87,11 @@ async function main() {
 			}
 
 			break;
-		default:
+		}
+
+		default: {
 			break;
+		}
 	}
 
 	function createLink(linkelement, url) {

@@ -1,5 +1,6 @@
-const path = require('path');
-const { UserscriptPlugin } = require('webpack-userscript');
+const path = require('node:path');
+const {UserscriptPlugin} = require('webpack-userscript');
+
 const dev = process.env.NODE_ENV === 'development';
 
 module.exports = {
@@ -30,16 +31,16 @@ module.exports = {
 				'https://greasemonkey.github.io/gm4-polyfill/gm4-polyfill.js',
 			],
 			'run-at': 'document-idle',
-		}
+		},
 	})],
 	resolve: {
 		fallback: {
-			http: require.resolve("stream-http"),
-			https: require.resolve("https-browserify"),
-			stream: require.resolve("stream-browserify"),
-			zlib: require.resolve("browserify-zlib"),
+			http: require.resolve('stream-http'),
+			https: require.resolve('https-browserify'),
+			stream: require.resolve('stream-browserify'),
+			zlib: require.resolve('browserify-zlib'),
 			buffer: require.resolve('buffer'),
-		}
+		},
 	},
 	target: 'web',
 };
