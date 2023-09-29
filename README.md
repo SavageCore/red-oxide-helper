@@ -7,7 +7,7 @@
 
 ## Install
 
-Click [here](https://github.com/SavageCore/red-oxide-helper/releases/latest/download/main.user.js) to install with [Greasemonkey](https://www.greasespot.net/) or [Violentmonkey](https://violentmonkey.github.io/)
+Click [here](https://github.com/SavageCore/red-oxide-helper/releases/latest/download/red-oxide-helper.user.js) to install with [Greasemonkey](https://www.greasespot.net/) or [Violentmonkey](https://violentmonkey.github.io/)
 
 ## Related
 

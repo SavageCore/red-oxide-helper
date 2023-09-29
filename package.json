@@ -1,28 +1,12 @@
 {
-	"dependencies": {
-		"assert": "^2.1.0",
-		"browserify-zlib": "^0.2.0",
-		"buffer": "^6.0.3",
-		"deluge-rpc": "^1.0.5",
-		"https-browserify": "^1.0.0",
-		"stream-browserify": "^3.0.0",
-		"stream-http": "^3.2.0",
-		"url": "^0.11.3"
+	"name": "red-oxide-helper",
+	"version": "0.1.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite build --watch --mode development",
+		"build": "vite build"
 	},
 	"devDependencies": {
-		"webpack": "^5.88.2",
-		"webpack-cli": "^5.1.4",
-		"webpack-dev-server": "^4.15.1",
-		"webpack-userscript": "^3.2.2"
-	},
-	"name": "red-oxide-helper",
-	"description": "",
-	"version": "0.1.0",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"dev": "webpack serve --mode development",
-		"build": "webpack --mode production"
-	},
-	"author": "",
-	"license": "Unlicense"
+		"vite-userscript-plugin": "^1.10.0"
+	}
 }
